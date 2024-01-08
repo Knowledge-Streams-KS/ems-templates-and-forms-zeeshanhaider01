@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for event in events %}
+        <div>{{event.name}}</div>
+        <div>{{event.detail}}</div>
+        <a href="{% url 'app:register' id=event.id %}">Register in this event</a>
+    {% endfor %}
+    
+</body>
+</html>
